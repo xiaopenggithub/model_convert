@@ -34,7 +34,7 @@ jobs:
         cd yolo
         mkdir -pv onnx
         cd onnx
-        wget ../Models/1.pt -O yolo.pt
+        wget http://8.153.78.249:9002/uploads/config/1.pt -O yolo.pt
         python ../export_det_v11.pyc -w yolo.pt --sim
 
     - name: Upload artifact
